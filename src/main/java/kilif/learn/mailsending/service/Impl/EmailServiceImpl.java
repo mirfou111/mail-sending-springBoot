@@ -34,10 +34,10 @@ public class EmailServiceImpl implements EmailService {
             mimeMessageHelper.setSubject(subject);
             mimeMessageHelper.setText(body);
 
-            for (int i = 0; i < file.length; i++) {
+            for (MultipartFile multipartFile : file) {
                 mimeMessageHelper.addAttachment(
-                        file[i].getOriginalFilename(),
-                        new ByteArrayResource(file[i].getBytes()));
+                        multipartFile.getOriginalFilename(),
+                        new ByteArrayResource(multipartFile.getBytes()));
             }
 
             javaMailSender.send(mimeMessage);
