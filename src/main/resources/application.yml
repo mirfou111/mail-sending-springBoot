@@ -1,8 +1,8 @@
 spring:
   mail:
     host: smtp.gmail.com
-    username: mirfou23@gmail.com
-    password: ecrknszasaxftizx
+    username: monemail@gmail.com #Your sender mail
+    password: aaaabbbbccccdddd #Your Gmail 2FA credential
     port: 587
     properties:
       mail:
@@ -12,5 +12,4 @@ spring:
           auth: true
 server:
   port: 9000
-#MES4B4YRCA724343PSQ971KY
 
